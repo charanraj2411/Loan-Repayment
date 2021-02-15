@@ -1,0 +1,68 @@
+<html>
+<head>
+	<title>Customer Details</title>
+	<link rel="stylesheet" href="{{url_for('static', filename='/main.css')}}" type="text/css">
+</head>
+<body>
+    <h1>Predict Loan Repayment status</h1>
+
+        <form action="/predict" method="POST">
+            <label>Has Credit Policy</label>
+            <input type="number" name="cred_policy" id="cred_policy" placeholder="Credit Policy">
+
+            <label>Interest Rate charged</label>
+            <input type="number"step=".01" name="Interest" id="Interest" placeholder="the Interest charged">
+
+            <label>Installment paid</label>
+            <input type="number" step=".01" name="installment" id="installment" placeholder="Enter the monthly  installment">
+
+            <label>Annual Income</label>
+            <input type="number" step=".01" name="Annual_Income" id="Annual_Income" placeholder="Enter the Annual Income">
+
+
+            <label>Debt to Income Ratio </label>
+           <input type="number" name="dti_ratio" id="dti_ratio" placeholder="Enter the Debt to Income Ratio" step=".01">
+
+            <label>Fico Score</label>
+            <input type="number" name="fico" id="fico" placeholder="What is the fico score">
+
+            <label>Days with the Credit Line</label>    
+            <input type="number" step=".01" name="Cred_line" id="Cred_line" placeholder="Enter the Credit Line">
+
+            <label>Revolving Balance</label>
+            <input type="number" name="revol_bal" id="revol_bal"placeholder="Revolving Balance">
+
+            <label>Revolving Utilistion</label>
+            <input type="number" name="revol_util" id="revol_util"placeholder="Revolving Urevol_utilisation?">
+
+            <label>Inquiry in last 6 months</label>
+            <input type="number" name="inq_6_mnths" id="inq_6_mnths" placeholder="Inquiry in last 6 months">
+
+            <label>Dealing in 2 years</label>
+            <input type="number" name="deal_2_yrs" id="deal_2_yrs"placeholder="Dealing in 2 years" step=".01">
+
+            <label>Public Record</label>
+            <input type="number" name="pub_rcrd" id="pub_rcrd"placeholder="Enter if you have public records">
+
+            <label>Credit Card Holder</label>
+            <input type="number" name="card_hldr" id="card_hldr"placeholder="Enter if you hold credit card">
+
+            <label>Is the purpose Debt Consolidation?</label>
+            <input type="number" name="debt_consol" id="debt_consol"placeholder="Enter if the reason was debt consolidation">
+
+            <label>Is the purpose Educational?</label>
+            <input type="number" name="educ" id="educ"placeholder="Enter if the reason was Educational?">
+
+            <label>Is the purpose Home Improvement?</label>
+            <input type="number" name="hme_improv" id="hme_improv"placeholder="Enter if the reason was Home Improvement?">
+
+            <label>Is the purpose Major Purpose?</label>
+            <input type="number" name="mjr_purpse" id="mjr_purpse"placeholder="Enter if the reason was Major Purpose?">
+
+            <label>Is the purpose small business?</label>
+            <input type="number" name="smll_busnes" id="smll_busnes"placeholder="Enter if the reason was Small Business?">
+
+            <input type="submit" value="Predict" class="sbt_btn">
+        </form>
+</body>
+</html>
